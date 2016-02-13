@@ -1,7 +1,6 @@
-name: Dynmap-WorldGuard
-main: org.dynmap.worldguard.DynmapWorldGuardPlugin
+name: Dynmap-ASkyBlock
+main: com.wasteofplastic.dynmap.DynmapASkyBlock
 version: "${project.version}"
-author: mikeprimm
-depend: [ dynmap, WorldGuard ]
-softdepend: [ WGCustomFlags ]
+author: tastybento
+depend: [ dynmap, ASkyBlock ]
 

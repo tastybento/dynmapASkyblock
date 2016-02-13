@@ -1,11 +1,11 @@
-# Dynmap-WorldGuard configuration
+# Dynmap-ASkyBlock configuration
 #
 update:
   # Seconds between checks for Residence updates
   period: 300
 
 layer:
-  name: "WorldGuard"
+  name: "ASkyBlock"
   # Make mobs layer hidden by default
   hidebydefault: false
   # ordering priority in layer menu (low goes before high - default is 0)
@@ -17,38 +17,27 @@ layer:
 use3dregions: false
 
 # Format for popup - substitute values for macros
-infowindow: '<div class=\"infowindow\"><span style=\"font-size:120%;">%regionname% (%parent%) - %priority%</span><br /> Owners <span style="font-weight:bold;">%playerowners%<br/>%groupowners%</span><br/>Members <span style="font-weight:bold;">%playermembers%<br/>%groupmembers%</span><br/>Flags<br /><span style="font-weight:bold;">%flags%</span></div>'
+infowindow: '<div class=\"infowindow\">Owner <span style="font-weight:bold;">%ownername%<br/></span><br/>Team Members <span style="font-weight:bold;"><br/>%teammembers%</span><br/>Island level<br /><span style="font-weight:bold;">%islandlevel%</span></div>'
 
-regionstyle:
+islandstyle:
   strokeColor: "#FF0000"
   strokeOpacity: 0.8
   strokeWeight: 3
   fillColor: "#FF0000"
   fillOpacity: 0.35
-  unownedStrokeColor: "#00FF00"
   
-# Optional setting to limit which regions to show, by name - if commented out, all regions are shown
-# To show all regions on a given world, add 'world:<worldname>' to the list
-visibleregions: [ ]
+# Optional setting to limit which islands to show, by name of owner
+visibleislands: [ ]
   
-# Optional setting to hide specific regions, by name
-# To hide all regions on a given world, add 'world:<worldname>' to the list
-hiddenregions: [ ]
-  
-# Optional per-region overrides for regionstyle (any defined replace those in regionstyle)
-#  Also supports region IDs with single wildcard '|' pattern
-custstyle:
-  customregion1:
-    strokeColor: "#00FF00"
+# Optional setting to hide specific islands, by name of owner
+hiddenislands: [ ]
 
-# Optional per-owner overrides for regionstyle (lower priority than custstyle) - works for group or user names
+# Optional per-owner overrides for islandstyle - use owner's UUID or name
 ownerstyle:
-  kingoftheworld:
-    strokecolor: "#C0C0C0"
+  # tastybento
+  tastybento:
+    strokeColor: "#00FFFF"
+    fillColor: "#00FFFF"
     
-    
-# Limit depth of child regions (1=just top regions, 2=top plus children of top)
-maxdepth: 16
-    
-# Limit number of regions processed per tick (avoid lag spikes on servers with lots of regions)
-updates-per-tick: 20
+# Limit number of islands processed per tick (avoid lag spikes on servers with lots of islands)
+updates-per-tick: 300

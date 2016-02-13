@@ -1,31 +1,35 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.dynmap</groupId>
-  <artifactId>Dynmap-WorldGuard</artifactId>
-  <version>0.80</version>
-  
-    <build>
-  	  <resources>
-		<resource>
-		  <directory>src/main/resources</directory>
-		  <filtering>true</filtering>
-		  <includes>
-			<include>*.yml</include>
-			<include>*.txt</include>
-		  </includes>
-		</resource>
-		<resource>
-		  <directory>src/main/resources</directory>
-		  <filtering>false</filtering>
-		  <excludes>
-			<exclude>*.yml</exclude>
-			<exclude>*.txt</exclude>
-		  </excludes>
-		</resource>
-	  </resources>
-  
-  	<plugins>
- 			<plugin>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.wasteofplastic</groupId>
+	<artifactId>Dynmap-IslandGuard</artifactId>
+	<version>1.0</version>
+
+	<build>
+		<defaultGoal>clean package install</defaultGoal>
+		<finalName>dynmap-islandguard</finalName>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>*.yml</include>
+					<include>*.txt</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>*.yml</exclude>
+					<exclude>*.txt</exclude>
+				</excludes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.0.2</version>
@@ -34,18 +38,15 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-  	</plugins>
-  </build>
-  
-       <repositories>
+		</plugins>
+	</build>
+
+	<repositories>
 		<repository>
-			<releases>
-			</releases>
-			<snapshots>
-			</snapshots>
-			<id>bukkit-repo</id>
-			<url>http://repo.bukkit.org/content/repositories/releases/</url>
+			<id>spigot-repo</id>
+			<url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
 		</repository>
+
 		<repository>
 			<releases>
 			</releases>
@@ -55,38 +56,33 @@
 			<url>http://repo.mikeprimm.com/</url>
 		</repository>
 	</repositories>
-  
-  <dependencies>
-  	<dependency>
-  		<groupId>org.dynmap</groupId>
-  		<artifactId>dynmap-api</artifactId>
-  		<version>1.9</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.bukkit</groupId>
-  		<artifactId>bukkit</artifactId>
-  		<version>1.7.10-R0.1-SNAPSHOT</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>com.sk89q</groupId>
-  		<artifactId>WorldGuard</artifactId>
-  		<version>6.0.0-beta-03</version>
-  		<scope>system</scope>
-  		<systemPath>${project.basedir}/worldguard-6.0.0-beta-03.jar</systemPath>
-  	</dependency>
-  	<dependency>
-  		<groupId>com.sk89q</groupId>
-  		<artifactId>WorldEdit</artifactId>
-  		<version>6.0</version>
-  		<scope>system</scope>
-  		<systemPath>${project.basedir}/worldedit-bukkit-6.0.jar</systemPath>
-  	</dependency>
-  	<dependency>
-  		<groupId>com.sk89q</groupId>
-  		<artifactId>WGCustomFlags</artifactId>
-  		<version>1.7</version>
-  		<scope>system</scope>
-  		<systemPath>${project.basedir}/WGCustomFlags-1.7.jar</systemPath>
-  	</dependency>
-  </dependencies>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.dynmap</groupId>
+			<artifactId>dynmap-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bukkit</groupId>
+			<artifactId>bukkit</artifactId>
+			<version>1.8.8-R0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.wasteofplastic</groupId>
+			<artifactId>ASkyBlock</artifactId>
+			<version>2.9.8.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/resources/ASkyBlock.jar</systemPath>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.dynmap</groupId>
+				<artifactId>dynmap-api</artifactId>
+				<version>1.9</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
