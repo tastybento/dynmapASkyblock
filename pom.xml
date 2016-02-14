@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.wasteofplastic</groupId>
-	<artifactId>Dynmap-IslandGuard</artifactId>
+	<artifactId>Dynmap-ASkyBlock</artifactId>
 	<version>1.0</version>
 
 	<build>
 		<defaultGoal>clean package install</defaultGoal>
-		<finalName>dynmap-islandguard</finalName>
+		<finalName>dynmap-askyblock</finalName>
 
 		<resources>
 			<resource>
@@ -61,8 +61,7 @@
 		<dependency>
 			<groupId>org.dynmap</groupId>
 			<artifactId>dynmap-api</artifactId>
-			<version>2.0</version>
-		</dependency>
+			</dependency>
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
@@ -73,7 +72,7 @@
 			<artifactId>ASkyBlock</artifactId>
 			<version>2.9.8.2</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/resources/ASkyBlock.jar</systemPath>
+			<systemPath>${project.basedir}/jar/ASkyBlock.jar</systemPath>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>

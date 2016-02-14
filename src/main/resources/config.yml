@@ -1,7 +1,7 @@
 # Dynmap-ASkyBlock configuration
 #
 update:
-  # Seconds between checks for Residence updates
+  # Seconds between checks for Island updates
   period: 300
 
 layer:
@@ -17,6 +17,11 @@ layer:
 use3dregions: false
 
 # Format for popup - substitute values for macros
+# Macros are:
+# %ownername% - island owner or leader
+# %teammembers% - team members
+# %islandlevel% - island level
+# %owneruuid% - owner's UUID (you probably never want to show this)
 infowindow: '<div class=\"infowindow\">Owner <span style="font-weight:bold;">%ownername%<br/></span><br/>Team Members <span style="font-weight:bold;"><br/>%teammembers%</span><br/>Island level<br /><span style="font-weight:bold;">%islandlevel%</span></div>'
 
 islandstyle:
