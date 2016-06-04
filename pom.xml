@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.wasteofplastic</groupId>
 	<artifactId>Dynmap-ASkyBlock</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 
 	<build>
 		<defaultGoal>clean package install</defaultGoal>
@@ -48,12 +48,14 @@
 		</repository>
 
 		<repository>
-			<releases>
-			</releases>
-			<snapshots>
-			</snapshots>
 			<id>dynmap-repo</id>
 			<url>http://repo.mikeprimm.com/</url>
+		</repository>
+
+		<repository>
+			<id>bintray-tastybento-maven-repo</id>
+			<name>bintray</name>
+			<url>http://dl.bintray.com/tastybento/maven-repo</url>
 		</repository>
 	</repositories>
 
@@ -61,7 +63,7 @@
 		<dependency>
 			<groupId>org.dynmap</groupId>
 			<artifactId>dynmap-api</artifactId>
-			</dependency>
+		</dependency>
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
@@ -69,10 +71,8 @@
 		</dependency>
 		<dependency>
 			<groupId>com.wasteofplastic</groupId>
-			<artifactId>ASkyBlock</artifactId>
-			<version>2.9.8.2</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/jar/ASkyBlock.jar</systemPath>
+			<artifactId>askyblock</artifactId>
+			<version>3.0.0.8</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
